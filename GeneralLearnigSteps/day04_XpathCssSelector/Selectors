@@ -1,0 +1,42 @@
+❖  Selenium LOCATORS, web sayfasındaki web öğelerini
+tanımlamak için kullanılır.
+❖  Selenium’da; metin kutuları, onay kutuları, linkler, radyo butonları,
+liste kutuları ve diğer tum web öğeler üzerinde eylemler
+gerçekleştirmek için LOCATORS’a ihtiyacımız vardır.
+❖  Toplam 8 tane locators vardir
+❖  6 si Html attribute larla ilgilidir.
+Bulmak için driver.findElement(By............);
+By.    id,name,className,tagName,linkText,partialLinkText     birini seçeriz
+AMAC: unique olani secmek tir hangisiyle ulasabilirsen onu sec
+MESELA amazon aramaçubugu kodu nu esas alalim
+
+<input type="text" id="twotabsearchtextbox" value="" name="field-keywords" autocomplete="off"
+ placeholder="" class="nav-input nav-progressive-attribute" dir="auto" tabindex="0" aria-label="Search">
+
+1-******************************** İD **********************
+ID: elemanin id si varsa iyi, id'ler ile direk aradigimiz elemana ulasiriz,
+ cunku id'ler genelde unique'tir  ==>By.id("twotabsearchtextbox")
+2-******************************** name **************
+name attribute: name attribute u ile ulasiriz ==>By.name("field-keywords")
+3-******************************** className **************
+Class name: className diye class isminden ulasiriz ==>By.className("nav-input nav-progressive-attribute")
+DİKKAT!  ❖ Class attribute’u olduğunda kullanılabilir.
+         ❖ Class ve value unique ise, bu metodu da kullanabilirsiniz, ancak genelde
+         class attribute ayni islevi yapan bir grup Web Elementi icin kullanilir
+         ❖ Class attribute’nun degeri bosluk iceriyorsa genelde By.classname( ) ile
+         yapilan locator’lar saglikli calismaz
+
+ <a type="text/javascript">windowp description refds</a>
+4-******************************** linkText **************
+link text: a taginin text i ile ulasiriz ==>By.linkText(“windowp description refds”)
+5-******************************** partialLinkText **************
+partial link text: a taginin text inin icinden bir kisim ile ulasiriz ==>By.partialLinkText(“description refds”)
+6-******************************** tagName **************
+HTML tag : tag adi ile ulasiriz ==>By.tagName(“a”)
+
+YUKARİDAKİ 6 LI HTML İLE İLGİLİ OLANLARDİ
+
+
+
+Xpath: en kullanisli yontem, css hiyerarjisi ile ulasilir ==>By.xpath(“xpathValue”)
+CSS Selector: css ozellileriile ulasilinabilinen farkli bir yontem ==>By.cssSelector(“cssValue”)
